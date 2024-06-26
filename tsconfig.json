@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Define o padrão ECMAScript para a compilação
+    "module": "commonjs", // Define o sistema de módulos
+    "jsx": "preserve", // Habilita a sintaxe JSX e a converte para React
+    "strict": true, // Habilita verificações de tipo rigorosas
+    "esModuleInterop": true, // Habilita interoperabilidade com módulos ES
+    "skipLibCheck": true, // Pula a verificação de tipo em arquivos de declaração
+    "forceConsistentCasingInFileNames": true, // Força consistência em nomes de arquivo
+    "baseUrl": ".", // Define a base para a resolução de caminhos
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["components/*"],
+      "@lib/*": ["lib/*"],
+      "@app/*": ["app/*"],
+      "@public/*": ["public/*"],
+      "@shadcn/ui": ["components/ui/*"]
+    },
+    "outDir": "./dist", // Define o diretório de saída para os arquivos compilados
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src/**/*", // Inclui todos os arquivos no diretório src
+    "pages/**/*", // Inclui todos os arquivos no diretório pages
+    "components/**/*", // Inclui todos os arquivos no diretório components
+    "lib/",
+    "app/api",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules", // Exclui o diretório node_modules
+    "dist", // Exclui o diretório dist
+    "**/*.test.ts", // Exclui arquivos de teste
+    "**/*.spec.ts" // Exclui arquivos de teste
+  ]
+}
